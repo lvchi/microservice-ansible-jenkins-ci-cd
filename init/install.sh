@@ -477,5 +477,3 @@ do_install() {
 # wrapped up in a function so that we have some protection against only getting
 # half the file during "curl | sh"
 do_install
-$ 1.00
-23,206 ₫
