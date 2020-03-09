@@ -4,7 +4,7 @@ services:
     container_name: jenkins
     image: jenkins-ansible/docker
     build:
-      context: ./Dockerfile-jenkins-ansible
+      context: infra
     ports:
       - "8080:8080"
     volumes:
