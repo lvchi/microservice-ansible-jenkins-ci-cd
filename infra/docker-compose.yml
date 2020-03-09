@@ -2,7 +2,7 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins/docker
+    image: jenkins-ansible/docker
     build:
       context: ./Dockerfile-jenkins-ansible
     ports:
