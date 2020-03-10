@@ -1,9 +1,6 @@
 pipeline {
-  agent {
-    node {
-      label 'jenkins-server'
-    }
-  }
+  agent any
+  
   stages {
     stage('Build result') {
       steps {
