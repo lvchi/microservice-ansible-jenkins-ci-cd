@@ -17,6 +17,10 @@ pipeline {
         sh 'docker build -t chilv/worker ./worker'
       }
     }
+    stage{
+      sh 'echo ** Logging in ***'
+      sh 'docker login -u chilv -p "toiyeuem1990"'
+    }
     stage('Push result image') {
       steps {
         sh 'docker push chilv/result'
