@@ -18,9 +18,6 @@ pipeline {
       }
     }
     stage('Push result image') {
-      when {
-        branch 'master'
-      }
       steps {
         withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
           sh 'docker push chilv/result'
@@ -28,9 +25,6 @@ pipeline {
       }
     }
     stage('Push vote image') {
-      when {
-        branch 'master'
-      }
       steps {
         withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
           sh 'docker push chilv/vote'
@@ -38,9 +32,6 @@ pipeline {
       }
     }
     stage('Push worker image') {
-      when {
-        branch 'master'
-      }
       steps {
         withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
           sh 'docker push chilv/worker'
