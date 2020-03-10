@@ -4,7 +4,6 @@ pipeline {
   stages {
     stage('Build result') {
       steps {
-        sh 'id'
         sh 'docker build -t chilv/result ./result'
       }
     } 
