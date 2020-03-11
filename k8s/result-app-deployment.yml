@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: result-app
-        image: dockersamples/examplevotingapp_result
+        image: chilv/result
         ports:
         - containerPort: 80
