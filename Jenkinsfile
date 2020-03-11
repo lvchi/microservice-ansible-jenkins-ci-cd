@@ -37,6 +37,10 @@ pipeline {
       steps {
         sh 'docker push chilv/worker'
       }
+    stage('Push worker image') {
+      steps {
+        sh 'ssh -i /opt/key/ssh admin@3.86.187.44 id'
+      }
     }
   }
 }
