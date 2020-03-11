@@ -43,4 +43,5 @@ pipeline {
         sh 'ssh -i /opt/key/ssh admin@3.86.187.44 id'
       }
     }
+  }
 }
