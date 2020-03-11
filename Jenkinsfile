@@ -40,8 +40,8 @@ pipeline {
     }
     stage('Deoloy to k8s') {
       steps {
-        sh 'cd /var/lib/jenkins/workspace/vote-app-CI/k8s'
-        sh 'ssh -i /opt/key/ssh admin@3.86.187.44 kubectl apply -f .yml'
+        sh 'scp -i /opt/key/ssh /var/lib/jenkins/workspace/vote-app-CI/k8s/* admin@3.86.187.44:/tmp/'
+        sh 'ssh -i /opt/key/ssh admin@3.86.187.44 kubectl apply -f *.*'
       }
     }
   }
