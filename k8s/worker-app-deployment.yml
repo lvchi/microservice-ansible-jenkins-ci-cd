@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: worker-app
-        image: chilv/worker
+        image: dockersamples/examplevotingapp_worker
